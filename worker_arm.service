@@ -1,0 +1,10 @@
+[Unit]
+Description=Worker
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/cpulimit --limit 30 -i -- /usr/bin/worker
+Restart=always
+[Install]
+WantedBy=multi-user.target
