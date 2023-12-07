@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/usr/bin/cpulimit --limit 65 -i -- /usr/bin/worker
+ExecStart=/usr/bin/worker
 Restart=always
 [Install]
 WantedBy=multi-user.target

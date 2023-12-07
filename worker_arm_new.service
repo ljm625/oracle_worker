@@ -5,6 +5,7 @@ After=network.target
 [Service]
 Type=simple
 CPUQuota=50%
+CPUWeight=20
 ExecStart=/usr/bin/worker
 Restart=always
 [Install]
